@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchTrendingProduct } from '../../store/reducer';
 import Header from '../Header';
 import Product from '../Product';
-import './mainscreen.css';
+import './main-screen.css';
 import Loader from '../Loader';
 import Footer from '../Footer';
 
-class MainScreen extends Component {
+class MainScreen extends PureComponent {
 
   componentDidMount() {
     this.props.fetchTrendingProduct();
@@ -24,7 +24,7 @@ class MainScreen extends Component {
         {!this.props.isLoading &&
           <div className="products-list">
             {this.props.products.map((product, index) => {
-              return <Product key={index} product={product} />
+              return <Product key={index+product.template} product={product} />
             })}
           </div>
         }
