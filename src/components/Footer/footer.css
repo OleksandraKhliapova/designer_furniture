@@ -1,0 +1,21 @@
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding:30px;
+  background-color: #2b343c;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
+
+.footer__quote{
+  max-width: 400px;
+}
+
+.footer__author{
+  font-size: 20px;
+  display: block;
+  text-align: right;
+}
